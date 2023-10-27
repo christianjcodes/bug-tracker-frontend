@@ -9,12 +9,14 @@ export default function Home() {
       <div className='loginArea'>
         <Form.Label htmlFor="inputEmail">Email</Form.Label>
         <Form.Control
-          type="username"
+          type="email"
+          placeholder='Enter email'
           id="inputEmail"
         />
         <Form.Label htmlFor="inputPassword">Password</Form.Label>
         <Form.Control
           type="password"
+          placeholder='Password'
           id="inputPassword"
         />
       </div>
