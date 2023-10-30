@@ -1,5 +1,7 @@
 export default function Page() {
     return (
-        <h1>New User Page</h1>
+        <div>
+            <h1>new user page</h1>            
+        </div>
     );
 }
