@@ -21,6 +21,7 @@ export default function Home() {
           placeholder='Password'
           id="inputPassword"
         />
+        <Link href="/forgot-password">Forgot password?</Link>
       </div>
       <Button variant="primary">Sign In</Button>{' '}
       <Link href="/new-user">New user? Create an account here!</Link>
