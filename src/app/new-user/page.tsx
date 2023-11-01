@@ -30,23 +30,23 @@ const Page: NextPage = () => {
             <div>
                 <TextField
                     label="First Name"
-                    id="outlined-start-adornment"
+                    id="first-name-entry"
                     sx={{ m: 1, width: '25ch' }}
                 />
                 <TextField
                     label="Last Name"
-                    id="outlined-start-adornment"
+                    id="last-name-entry"
                     sx={{ m: 1, width: '25ch' }}
                 />
                 <TextField
                     label="Email Address"
-                    id="outlined-start-adornment"
+                    id="email-entry"
                     sx={{ m: 1, width: '25ch' }}
                 />
                 <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                    <InputLabel htmlFor="password-entry">Password</InputLabel>
                     <OutlinedInput
-                    id="outlined-adornment-password"
+                    id="password-entry"
                     type={showPassword ? 'text' : 'password'}
                     endAdornment={
                         <InputAdornment position="end">
