@@ -11,6 +11,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Button from '@mui/material/Button';
 
 
 export default function Home() {
@@ -52,6 +53,7 @@ export default function Home() {
               label="Password"
               />
           </FormControl>
+          <Button variant='contained' size='large'>Sign In</Button>
         </div>
       </Box>  
       
