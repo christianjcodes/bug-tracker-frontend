@@ -1,7 +1,13 @@
-export default function Page() {
+import * as React from 'react';
+
+const Page = () => {
     return (
-        <h1>
-            Dashboard Page
-        </h1>
+        <>
+            <h1>
+                Dashboard
+            </h1>
+        </>
     );
 }
+
+export default Page;

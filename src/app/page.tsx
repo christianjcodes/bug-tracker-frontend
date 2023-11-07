@@ -53,7 +53,9 @@ export default function Home() {
               label="Password"
               />
           </FormControl>
-          <Button variant='contained' size='large'>Sign In</Button>
+          <Link href="/dashboard">
+            <Button variant='contained' size='large'>Sign In</Button>
+          </Link>
         </div>
       </Box>  
       
