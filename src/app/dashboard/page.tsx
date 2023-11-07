@@ -2,11 +2,11 @@ import * as React from 'react';
 
 const Page = () => {
     return (
-        <>
-            <h1>
-                Dashboard
-            </h1>
-        </>
+        <nav>
+            <ul>
+                <li>Projects</li>
+            </ul>
+        </nav>
     );
 }
 
