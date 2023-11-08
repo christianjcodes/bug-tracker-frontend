@@ -13,4 +13,10 @@ const SideBar = () => {
     )
 };
 
+const SideBarIcon = ({ icon }:any) => (
+    <div className="sidebar-icon">
+        {icon}
+    </div>
+);
+
 export default SideBar;
