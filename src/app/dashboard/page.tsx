@@ -1,12 +1,11 @@
 import * as React from 'react';
+import SideBar from '../components/SideBar';
 
 const Page = () => {
     return (
-        <nav>
-            <ul>
-                <li>Projects</li>
-            </ul>
-        </nav>
+        <div className='flex'>
+            <SideBar />
+        </div>
     );
 }
 
