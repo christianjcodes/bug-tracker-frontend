@@ -1,4 +1,5 @@
 import { FaBug } from "react-icons/fa";
+import Link from "next/link";
 
 const SideBar = () => {
 
@@ -10,9 +11,11 @@ const SideBar = () => {
                 <SideBarIcon icon={<FaBug size="38" />} />
                 <h1 className="ml-2 mt-4 font-bold">Bug Tracker</h1>
             </div>
-            <h3>Dashboard</h3>
-            <h3>Tickets</h3>
-            <h3>Administration</h3>
+            <div className="ml-2 space-y-4">
+                <h3>Dashboard</h3>
+                <h3>Tickets</h3>
+                <h3>Administration</h3>
+            </div>
         </div>
     )
 };
