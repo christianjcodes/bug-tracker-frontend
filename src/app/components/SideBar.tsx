@@ -1,5 +1,4 @@
 import { FaBug } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Button from '@mui/material/Button';
 
