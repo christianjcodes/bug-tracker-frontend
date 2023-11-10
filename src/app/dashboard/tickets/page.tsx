@@ -1,5 +1,11 @@
+import SideBar from "@/app/components/SideBar";
+
 export default function Page() {
     return (
-        <h1>Tickets</h1>
+        <>
+            <div className="flex">
+                <SideBar/>
+            </div>
+        </>
     );
 }
