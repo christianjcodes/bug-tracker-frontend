@@ -15,8 +15,8 @@ const SideBar = () => {
             </div>
             <div className="ml-2 space-y-4">
                 <h3 className="hover:text-cyan-500"><Link href="/dashboard">Dashboard</Link></h3>
-                <h3 className="hover:text-cyan-500"><Link href="/tickets">Tickets</Link></h3>
-                <h3 className="hover:text-cyan-500"><Link href="/admin">Administration</Link></h3>
+                <h3 className="hover:text-cyan-500"><Link href="/dashboard/tickets">Tickets</Link></h3>
+                <h3 className="hover:text-cyan-500"><Link href="/dashboard/admin">Administration</Link></h3>
             </div>
             <div className="flex justify-center items-center mt-10">
                 <Link href="/">
