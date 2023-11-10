@@ -1,4 +1,5 @@
 import { FaBug } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Button from '@mui/material/Button';
 
@@ -17,8 +18,11 @@ const SideBar = () => {
                 <h3 className="hover:text-teal-500"><Link href="/tickets">Tickets</Link></h3>
                 <h3 className="hover:text-teal-500"><Link href="/admin">Administration</Link></h3>
             </div>
-            <div className="ml-9 mt-4">
+            <div className="flex justify-center items-center mt-10">
                 <Button variant="outlined" size="medium">Sign Out</Button>
+            </div>
+            <div>
+                <SideBarIcon icon={<FaGithub size="28" />} />
             </div>
         </div>
     )
