@@ -3,9 +3,12 @@ import SideBar from '../components/SideBar';
 
 const Page = () => {
     return (
-        <div className='flex'>
-            <SideBar />
-        </div>
+        <>
+            <div className='flex'>
+                <SideBar />
+            </div>
+        </>
+        
     );
 }
 
