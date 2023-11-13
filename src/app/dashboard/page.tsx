@@ -4,7 +4,7 @@ import SideBar from '../components/SideBar';
 const Page = () => {
     return (
         <>
-            <div className='flex'>
+            <div className='flex flex-col min-h-screen relative pb-20'>
                 <SideBar />
             </div>
         </>

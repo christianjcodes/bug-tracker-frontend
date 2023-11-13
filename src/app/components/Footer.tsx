@@ -4,13 +4,16 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer>
-            <div>
+        <div className='mt-auto'>
+            <footer className='absolute bottom-0 flex flex-row justify-center w-full text-slate-600
+                                space-x-4 pb-4'>
                 <p>Christian Johnson &copy; {new Date().getFullYear()}</p>
-                <Link href="https://github.com/christianjcodes">
-                    <FaGithub size="28"/>
-                </Link>
-            </div>
-        </footer>
+                <div className='hover:text-cyan-500'>
+                    <Link href="https://github.com/christianjcodes">
+                        <FaGithub size="24"/>
+                    </Link>
+                </div>
+            </footer>
+        </div>
     );
 }
