@@ -7,7 +7,8 @@ const SideBar = () => {
     return (
         <div className="fixed top-0 left-0 h-screen w-44 m-0
                         flex flex-col bg-stone-50 text-slate-600
-                        shadow-lg">
+                        shadow-lg 
+                        dark:text-white  dark:bg-slate-800">
             <div className="flex flex-row text-teal-500">
                 <SideBarIcon icon={<FaBug size="38" />} />
                 <h1 className="ml-2 mt-4 font-bold">Bug Tracker</h1>

@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className='mt-auto'>
             <footer className='absolute bottom-0 flex flex-row justify-center w-full text-slate-600
-                                space-x-4 pb-4'>
+                                space-x-4 pb-4 dark:text-white'>
                 <p>Christian Johnson &copy; {new Date().getFullYear()}</p>
                 <div className='hover:text-cyan-500'>
                     <Link href="https://github.com/christianjcodes">
