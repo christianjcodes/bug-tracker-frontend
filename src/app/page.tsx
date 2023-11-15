@@ -76,6 +76,7 @@ export default function Home() {
         <h3 className='hover:text-cyan-500'><Link href="/forgot-password">Forgot password?</Link></h3>
         <h3 className='hover:text-cyan-500'><Link href="/new-user">New user? Create an account here!</Link></h3>
       </div>
+
     </div>
   );
 }
