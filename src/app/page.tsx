@@ -2,7 +2,7 @@
 import styles from './page.module.css';
 import Link from 'next/link';
 import * as React from "react";
-import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -25,15 +25,21 @@ export default function Home() {
     };
 
   return (
-    <div className='login'>
-      <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        <div>
+    <div className='h-[50vh] flex flex-col items-center justify-center'>
+      <Grid 
+        container 
+        spacing={2}
+        justifyContent="center"
+        alignItems="center">
+        <Grid item>
           <TextField
               label="Email Address"
               id="email-entry"
-              sx={{ m: 1, width: '25ch' }}
+              sx={{ m: 0, width: '25ch', height: '55px' }}
           />
-          <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
+        </Grid>
+        <Grid item>
+          <FormControl sx={{ m: 0, width: '25ch', height: '55px' }} variant="outlined">
               <InputLabel htmlFor="password-entry">Password</InputLabel>
               <OutlinedInput
               id="password-entry"
@@ -52,16 +58,23 @@ export default function Home() {
               }
               label="Password"
               />
-          </FormControl>
+          </FormControl> 
+        </Grid>  
+
+        <Grid item alignItems="center" style={{ display: "flex"}}>
           <Link href="/dashboard">
-            <Button variant='contained' size='large'>Sign In</Button>
+            <Button 
+              variant='contained' 
+              size='large'
+              style={{ minHeight: '55px' }}
+              >Sign In</Button>
           </Link>
-        </div>
-      </Box>  
+        </Grid>
+      </Grid>  
       
-      <div className='links'>
-        <Link href="/forgot-password">Forgot password?</Link>
-        <Link href="/new-user">New user? Create an account here!</Link>
+      <div className='flex flex-row space-x-6 text-sm mt-4'>
+        <h3 className='hover:text-cyan-500'><Link href="/forgot-password">Forgot password?</Link></h3>
+        <h3 className='hover:text-cyan-500'><Link href="/new-user">New user? Create an account here!</Link></h3>
       </div>
     </div>
   );
