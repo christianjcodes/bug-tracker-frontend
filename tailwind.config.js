@@ -12,7 +12,11 @@ module.exports = {
   ],
   
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'waves': "url('./waves-background.png')",
+      },
+    },
   },
   plugins: [],
 }
