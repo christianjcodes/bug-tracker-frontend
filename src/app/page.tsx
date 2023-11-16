@@ -11,7 +11,6 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Button from '@mui/material/Button';
 
 
 export default function Home() {
@@ -63,11 +62,16 @@ export default function Home() {
 
         <Grid item alignItems="center" style={{ display: "flex"}}>
           <Link href="/dashboard">
-            <Button 
-              variant='contained' 
-              size='large'
-              style={{ minHeight: '55px' }}
-              >Sign In</Button>
+            <button className="
+              bg-teal-500 
+              hover:bg-teal-600 
+              text-white
+              text-xl 
+              py-2 px-4 
+              rounded
+              h-[55px]">
+              Sign In
+            </button>
           </Link>
         </Grid>
       </Grid>  
