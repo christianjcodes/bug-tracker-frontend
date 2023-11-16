@@ -20,7 +20,21 @@ const SideBar = () => {
             </div>
             <div className="flex justify-center items-center mt-10">
                 <Link href="/">
-                    <Button variant="outlined" size="medium">Sign Out</Button>
+                    <button className="
+                        h-10 
+                        px-5
+                        text-l
+                        text-red-500 
+                        transition-colors 
+                        duration-150 
+                        border 
+                        border-red-500 
+                        rounded-lg 
+                        focus:shadow-outline 
+                        hover:bg-red-700 
+                        hover:text-red-100">
+                        Sign Out
+                    </button>
                 </Link>
             </div>
         </div>
