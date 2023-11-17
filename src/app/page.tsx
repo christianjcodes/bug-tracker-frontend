@@ -1,8 +1,7 @@
-
-import styles from './page.module.css';
 import Link from 'next/link';
 import * as React from "react";
 import Background from './components/Background';
+import wavesSvg from './components/Waves.svg';
 
 
 export default function Home() {
