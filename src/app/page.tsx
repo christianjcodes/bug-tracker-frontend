@@ -1,88 +1,83 @@
-'use client'
+
 import styles from './page.module.css';
 import Link from 'next/link';
 import * as React from "react";
-import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import TextField from '@mui/material/TextField';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Background from './components/Background';
 
 
 export default function Home() {
 
-  const [showPassword, setShowPassword] = React.useState(false);
-
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-  
-    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-      event.preventDefault();
-    };
-
   return (
-    <div>
-      <div className='h-[50vh] flex flex-col items-center justify-center'>
-        <Grid 
-          container 
-          spacing={2}
-          justifyContent="center"
-          alignItems="center">
-          <Grid item>
-            <TextField
-                label="Email Address"
-                id="email-entry"
-                sx={{ m: 0, width: '25ch', height: '55px' }}
-            />
-          </Grid>
-          <Grid item>
-            <FormControl sx={{ m: 0, width: '25ch', height: '55px' }} variant="outlined">
-                <InputLabel htmlFor="password-entry">Password</InputLabel>
-                <OutlinedInput
-                id="password-entry"
-                type={showPassword ? 'text' : 'password'}
-                endAdornment={
-                    <InputAdornment position="end">
-                    <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                    >
-                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                    </IconButton>
-                    </InputAdornment>
-                }
-                label="Password"
-                />
-            </FormControl> 
-          </Grid>  
-
-          <Grid item alignItems="center" style={{ display: "flex"}}>
-            <Link href="/dashboard">
-              <button className="
-                bg-teal-500 
-                hover:bg-teal-600 
-                text-white
-                text-xl 
-                py-2 px-4 
-                rounded
-                h-[55px]">
-                Sign In
-              </button>
-            </Link>
-          </Grid>
-        </Grid>  
-        
-        <div className='flex flex-row space-x-6 text-sm mt-4'>
-          <h3 className='hover:text-cyan-500'><Link href="/forgot-password">Forgot password?</Link></h3>
-          <h3 className='hover:text-cyan-500'><Link href="/new-user">New user? Create an account here!</Link></h3>
+    <div className="w-full max-w-xs">
+      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+            Username
+          </label>
+          <input className="
+            shadow 
+            appearance-none 
+            border rounded 
+            w-full 
+            py-2 
+            px-3 
+            text-gray-700 
+            leading-tight 
+            focus:outline-none 
+            focus:shadow-outline" 
+            id="username" 
+            type="text" 
+            placeholder="Username"/>
         </div>
-      </div>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+            Password
+          </label>
+          <input className="
+          shadow 
+          appearance-none 
+          border 
+          rounded 
+          w-full 
+          py-2 
+          px-3 
+          text-gray-700 
+          mb-3 
+          leading-tight 
+          focus:outline-none 
+          focus:shadow-outline" 
+          id="password" 
+          type="password" 
+          placeholder="******************"/>
+        </div>
+        <div className="flex items-center justify-between">
+          <Link href="/dashboard">
+            <button className="
+              bg-teal-500 
+              hover:bg-teal-600 
+              text-white 
+              font-semibold 
+              py-2 
+              px-4 
+              rounded 
+              focus:outline-none 
+              focus:shadow-outline" type="button">
+              Sign In
+            </button>
+          </Link>
+          <div className="
+            inline-block 
+            align-baseline 
+            font-bold 
+            text-sm 
+            text-teal-500 
+            hover:text-teal-700">
+            <Link href="/forgot-password">
+              Forgot Password?
+            </Link>
+          </div>
+        </div>
+      </form>
     </div>
   );
 }
