@@ -71,8 +71,8 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <Link href="/dashboard">
                 <button className="
-                  bg-teal-500 
-                  hover:bg-teal-600 
+                  bg-sky-500 
+                  hover:bg-sky-600 
                   text-white 
                   font-semibold 
                   py-2 
@@ -88,8 +88,8 @@ export default function Home() {
                 align-baseline 
                 font-bold 
                 text-sm 
-                text-teal-500 
-                hover:text-teal-700">
+                text-sky-500 
+                hover:text-sky-700">
                 <Link href="/new-user">
                   New User?
                 </Link>

@@ -1,5 +1,4 @@
 import * as React from "react"
-
 const Background = (props:any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -26,3 +25,5 @@ const Background = (props:any) => (
   </svg>
 )
 export default Background
+
+  
