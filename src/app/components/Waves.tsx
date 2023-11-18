@@ -1,5 +1,5 @@
 import * as React from "react"
-const Background = (props:any) => (
+const Waves = (props:any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={1920}
@@ -24,6 +24,6 @@ const Background = (props:any) => (
     </defs>
   </svg>
 )
-export default Background
+export default Waves
 
   
