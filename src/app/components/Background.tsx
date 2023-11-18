@@ -1,21 +1,28 @@
-const Background = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 590">
-      <defs>
-        <linearGradient id="a" x1="1%" x2="99%" y1="41%" y2="59%">
-          <stop offset="5%" stopColor="#7bdcb5" />
-          <stop offset="95%" stopColor="#0693e3" />
-        </linearGradient>
-      </defs>
+import * as React from "react"
+
+const Background = (props:any) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={1920}
+    height={560}
+    preserveAspectRatio="none"
+    {...props}
+  >
+    <g fill="none" mask='url("#a")'>
       <path
-        fill="url(#a)"
-        fillOpacity={0.53}
-        d="M0 600V200c118.933-34.133 237.867-68.267 414-52 176.133 16.267 409.467 82.933 590 100 180.533 17.067 308.267-15.467 436-48v400Z"
+        fill="rgba(20, 184, 166, 1)"
+        d="M0 231c128-24 384-124.8 640-120 256 4.8 384 154 640 144s512-155.2 640-194v499H0z"
       />
       <path
-        fill="url(#a)"
-        d="M0 600V400c134.267 30.667 268.533 61.333 423 54 154.467-7.333 329.133-52.667 502-68 172.867-15.333 343.933-.667 515 14v200Z"
+        fill="rgba(37, 171, 255, 1)"
+        d="M0 555c192-49.8 576-224.8 960-249 384-24.2 768 102.4 960 128v126H0z"
       />
-    </svg>
-  )
-  export default Background
-  
+    </g>
+    <defs>
+      <mask id="a">
+        <path fill="#fff" d="M0 0h1920v560H0z" />
+      </mask>
+    </defs>
+  </svg>
+)
+export default Background
