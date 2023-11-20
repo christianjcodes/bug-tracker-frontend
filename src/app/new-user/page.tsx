@@ -1,67 +1,103 @@
-'use client'
 import * as React from "react";
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import TextField from '@mui/material/TextField';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff'; 
-import type { NextPage } from 'next';
+import Link from "next/link";
+import { FaBug } from "react-icons/fa";
+import Waves from "../components/Waves";
 
-const Page: NextPage = () => {
 
-    const [showPassword, setShowPassword] = React.useState(false);
-
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-  
-    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-      event.preventDefault();
-    };
-  
+export default function Page() {
     return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-            <div>
-                <TextField
-                    label="First Name"
-                    id="first-name-entry"
-                    sx={{ m: 1, width: '25ch' }}
-                />
-                <TextField
-                    label="Last Name"
-                    id="last-name-entry"
-                    sx={{ m: 1, width: '25ch' }}
-                />
-                <TextField
-                    label="Email Address"
-                    id="email-entry"
-                    sx={{ m: 1, width: '25ch' }}
-                />
-                <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                    <InputLabel htmlFor="password-entry">Password</InputLabel>
-                    <OutlinedInput
-                    id="password-entry"
-                    type={showPassword ? 'text' : 'password'}
-                    endAdornment={
-                        <InputAdornment position="end">
-                        <IconButton
-                            aria-label="toggle password visibility"
-                            onClick={handleClickShowPassword}
-                            onMouseDown={handleMouseDownPassword}
-                            edge="end"
-                        >
-                            {showPassword ? <VisibilityOff /> : <Visibility />}
-                        </IconButton>
-                        </InputAdornment>
-                    }
-                    label="Password"
-                    />
-                </FormControl>
-            </div>
-        </Box>  
+      <div className='h-screen w-screen flex flex-col align-bottom bg-gradient-to-br from-slate-50 to-emerald-300 overflow-hidden'>
+        <div className='h-[70vh] flex justify-center items-center'>
+          <div className="w-full max-w-xs">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <div className='mb-4 flex text-teal-500 font-bold text-xl justify-center space-x-1.5'>
+                <FaBug size="26"/>
+                <h1>
+                  Bug Tracker
+                </h1>
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                  Email
+                </label>
+                <input className="
+                  shadow 
+                  appearance-none 
+                  border rounded 
+                  w-full 
+                  py-2 
+                  px-3 
+                  text-gray-700 
+                  leading-tight 
+                  focus:outline-none 
+                  focus:shadow-outline" 
+                  id="email" 
+                  type="text" 
+                  placeholder="Email"/>
+              </div>
+              <div className="mb-[1px]">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                  Password
+                </label>
+                <input className="
+                shadow 
+                appearance-none 
+                border 
+                rounded 
+                w-full 
+                py-2 
+                px-3 
+                text-gray-700 
+                mb-2 
+                leading-tight 
+                focus:outline-none 
+                focus:shadow-outline" 
+                id="password" 
+                type="password" 
+                placeholder="**********"/>
+              </div>
+              <div className='
+                mb-6
+                inline-block
+                font-bold
+                text-sm
+                text-gray-500
+                hover:text-gray-700'>
+                <Link href="/forgot-password">
+                  Forgot Password?
+                </Link>
+              </div>
+              <div className="flex items-center justify-between">
+                <Link href="/dashboard">
+                  <button className="
+                    bg-sky-500 
+                    hover:bg-sky-600 
+                    text-white 
+                    font-semibold 
+                    py-2 
+                    px-4 
+                    rounded 
+                    focus:outline-none 
+                    focus:shadow-outline" type="button">
+                    Sign In
+                  </button>
+                </Link>
+                <div className="
+                  inline-block 
+                  align-baseline 
+                  font-bold 
+                  text-sm 
+                  text-sky-500 
+                  hover:text-sky-700">
+                  <Link href="/new-user">
+                    New User?
+                  </Link>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <Waves/>
+      </div>
     );
-};
-
-export default Page;
+}

@@ -55,7 +55,7 @@ export default function Home() {
               focus:shadow-outline" 
               id="password" 
               type="password" 
-              placeholder="******************"/>
+              placeholder="**********"/>
             </div>
             <div className='
               mb-6
