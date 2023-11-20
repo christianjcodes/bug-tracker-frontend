@@ -34,6 +34,7 @@ export default function Home() {
                 focus:shadow-outline" 
                 id="email" 
                 type="text"
+                autoComplete="email"
                 placeholder="Email"/>
             </div>
             <div className="mb-[1px]">
