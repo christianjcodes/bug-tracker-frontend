@@ -33,7 +33,7 @@ export default function Home() {
                 focus:outline-none 
                 focus:shadow-outline" 
                 id="email" 
-                type="text" 
+                type="text"
                 placeholder="Email"/>
             </div>
             <div className="mb-[1px]">
@@ -55,6 +55,7 @@ export default function Home() {
               focus:shadow-outline" 
               id="password" 
               type="password" 
+              autoComplete="current-password"
               placeholder="**********"/>
             </div>
             <div className='

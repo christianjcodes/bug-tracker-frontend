@@ -16,6 +16,49 @@ export default function Page() {
                   Bug Tracker
                 </h1>
               </div>
+              <div className="mb-4 flex text-sky-500 font-bold text-xl justify-center">
+                <h1>Create New Account</h1>
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+                  First Name
+                </label>
+                <input className="
+                  shadow
+                  appearance-none
+                  border rounded
+                  w-full
+                  py-2
+                  px-3
+                  text-gray-700
+                  leading-tight
+                  focus:outline-none
+                  focus:shadow-outline"
+                  id="firstName"
+                  type="text"
+                  autoComplete="given-name"
+                  placeholder="First Name"/>
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+                  Last Name
+                </label>
+                <input className="
+                  shadow
+                  appearance-none
+                  border rounded
+                  w-full
+                  py-2
+                  px-3
+                  text-gray-700
+                  leading-tight
+                  focus:outline-none
+                  focus:shadow-outline"
+                  id="lastName"
+                  type="text"
+                  autoComplete="family-name"
+                  placeholder="Last Name"/>
+              </div>
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                   Email
@@ -31,11 +74,11 @@ export default function Page() {
                   leading-tight 
                   focus:outline-none 
                   focus:shadow-outline" 
-                  id="email" 
+                  id="newEmail" 
                   type="text" 
                   placeholder="Email"/>
               </div>
-              <div className="mb-[1px]">
+              <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                   Password
                 </label>
@@ -52,20 +95,10 @@ export default function Page() {
                 leading-tight 
                 focus:outline-none 
                 focus:shadow-outline" 
-                id="password" 
+                id="newPassword" 
                 type="password" 
+                autoComplete="new-password"
                 placeholder="**********"/>
-              </div>
-              <div className='
-                mb-6
-                inline-block
-                font-bold
-                text-sm
-                text-gray-500
-                hover:text-gray-700'>
-                <Link href="/forgot-password">
-                  Forgot Password?
-                </Link>
               </div>
               <div className="flex items-center justify-between">
                 <Link href="/dashboard">
@@ -79,7 +112,7 @@ export default function Page() {
                     rounded 
                     focus:outline-none 
                     focus:shadow-outline" type="button">
-                    Sign In
+                    Sign Up
                   </button>
                 </Link>
                 <div className="
@@ -89,8 +122,8 @@ export default function Page() {
                   text-sm 
                   text-sky-500 
                   hover:text-sky-700">
-                  <Link href="/new-user">
-                    New User?
+                  <Link href="/">
+                    Existing User?
                   </Link>
                 </div>
               </div>
