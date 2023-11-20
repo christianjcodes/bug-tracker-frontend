@@ -32,7 +32,7 @@ export default function Home() {
                 leading-tight 
                 focus:outline-none 
                 focus:shadow-outline" 
-                id="username" 
+                id="email" 
                 type="text" 
                 placeholder="Email"/>
             </div>
