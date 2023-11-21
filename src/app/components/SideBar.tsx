@@ -5,7 +5,7 @@ const SideBar = () => {
 
     return (
         <div className="fixed top-0 left-0 h-screen w-44 m-0
-                        flex flex-col bg-slate-50 text-sky-500
+                        flex flex-col bg-white  text-sky-500
                         shadow-lg
                         dark:text-white  dark:bg-slate-800">
             <div className="ml-1.5 flex flex-row text-teal-500">
@@ -13,7 +13,7 @@ const SideBar = () => {
                 <h1 className="ml-2 mt-4 font-bold">Bug Tracker</h1>
             </div>
             <div className="ml-4 space-y-8 font-bold">
-                <h3 className="hover:text-sky-700"><Link href="/dashboard">Dashboard</Link></h3>
+                <h3 className="hover:text-sky-700 mt-4"><Link href="/dashboard">Dashboard</Link></h3>
                 <h3 className="hover:text-sky-700"><Link href="/dashboard/tickets">Tickets</Link></h3>
                 <h3 className="hover:text-sky-700"><Link href="/dashboard/admin">Administration</Link></h3>
             </div>
