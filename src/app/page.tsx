@@ -7,7 +7,7 @@ import { FaBug } from 'react-icons/fa';
 export default function Home() {
 
   return (
-    <div className='h-screen w-screen flex flex-col align-bottom bg-gradient-to-br from-slate-50 to-emerald-300 overflow-hidden'>
+    <div className='h-screen w-screen flex flex-col align-bottom'>
       <div className='h-[70vh] flex justify-center items-center'>
         <div className="w-full max-w-xs">
           <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -100,7 +100,6 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <Waves/>
     </div>
   );
 }

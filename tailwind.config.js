@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'waves': "url('./components/Waves.svg')",
+        'SunTornado': "url('./components/SunTornado.svg')",
       },
     },
   },

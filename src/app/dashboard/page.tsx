@@ -4,12 +4,13 @@ import SideBar from '../components/SideBar';
 export default function Page() {
     return (
         <>
-            <div className='h-screen w-screen flex flex-col
-                bg-gradient-to-br from-slate-50 to-emerald-300 overflow-hidden'>    
+            <div className='h-screen w-screen flex flex-col'>    
                 
                 <SideBar />
             
-                <main className='flex items-center justify-center flex-col h-[75vh]'>
+                <main className='flex items-center justify-center flex-col 
+                    h-[75vh] mt-[5vh] ml-[17rem] mr-[10vh] bg-white
+                    shadow-lg rounded-lg'>
                     <h1>Main Content Goes Here</h1>
                 </main>
                 
