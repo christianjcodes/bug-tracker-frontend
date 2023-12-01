@@ -9,7 +9,7 @@ export default function Page() {
                 <SideBar />
             
                 <main className='flex items-center justify-center flex-col 
-                    h-[75vh] mt-[5vh] ml-[17rem] mr-[10vh] bg-white
+                    h-[89vh] mb-[5vh] mt-[5vh] ml-[17rem] mr-[10vh] bg-white
                     shadow-lg rounded-lg'>
                     <h1>Main Content Goes Here</h1>
                 </main>

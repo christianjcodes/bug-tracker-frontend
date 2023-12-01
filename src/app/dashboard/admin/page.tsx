@@ -4,8 +4,16 @@ import SideBar from "@/app/components/SideBar";
 export default function Page() {
     return (
         <>
-            <div className="flex">
+            <div className="flex flex-col h-screen w-screen">
+
                 <SideBar/>
+
+                <main className='flex items-center justify-center flex-col 
+                    h-[89vh] mb-[5vh] mt-[5vh] ml-[17rem] mr-[10vh] bg-white
+                    shadow-lg rounded-lg'>
+                    <h1>Admin Content Goes Here</h1>
+                </main>
+                
             </div>
         </>
     );
