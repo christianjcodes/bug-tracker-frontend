@@ -12,12 +12,6 @@ module.exports = {
   ],
   
   theme: {
-    extend: {
-      backgroundImage: {
-        'waves': "url('./components/Waves.svg')",
-        'SunTornado': "url('./components/SunTornado.svg')",
-      },
-    },
   },
   plugins: [],
 }

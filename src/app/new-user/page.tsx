@@ -1,7 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
 import { FaBug } from "react-icons/fa";
-import Waves from "../components/Waves";
 
 
 export default function Page() {

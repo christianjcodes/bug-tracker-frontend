@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import * as React from "react";
-import Waves from './components/Waves';
 import { FaBug } from 'react-icons/fa';
 
 
