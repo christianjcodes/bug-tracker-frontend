@@ -1,5 +1,6 @@
 import { FaBug } from "react-icons/fa";
 import Link from "next/link";
+import Pathname from "./Pathname";
 
 const SideBar = () => {
 
@@ -13,9 +14,9 @@ const SideBar = () => {
                 <h1 className="ml-2 mt-4 font-bold">Bug Tracker</h1>
             </div>
             <div className="ml-4 space-y-8 font-bold">
-                <h3 className="hover:text-sky-700 mt-4"><Link href="/dashboard">Dashboard</Link></h3>
-                <h3 className="hover:text-sky-700"><Link href="/dashboard/tickets">Tickets</Link></h3>
-                <h3 className="hover:text-sky-700"><Link href="/dashboard/admin">Administration</Link></h3>
+                <h3 id="dashboard" className="hover:text-sky-700 mt-4"><Link href="/dashboard">Dashboard</Link></h3>
+                <h3 id="tickets" className="hover:text-sky-700"><Link href="/dashboard/tickets">Tickets</Link></h3>
+                <h3 id="admin" className="hover:text-sky-700"><Link href="/dashboard/admin">Administration</Link></h3>
             </div>
             <div className="flex justify-center items-center mt-10">
                 <Link href="/">
@@ -46,5 +47,13 @@ const SideBarIcon = ({ icon }:any) => (
         {icon}
     </div>
 );
+
+let component = Pathname;
+
+if (component === "/dashboard") {
+
+    const element = document.getElementById("dashboard");
+    
+}
 
 export default SideBar;

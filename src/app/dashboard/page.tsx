@@ -1,6 +1,7 @@
 import * as React from 'react';
 import SideBar from '../components/SideBar';
 
+
 export default function Page() {
     return (
         <>
@@ -13,7 +14,7 @@ export default function Page() {
                     shadow-lg rounded-lg'>
                     <h1>Main Content Goes Here</h1>
                 </main>
-                
+
             </div>
         </>
     );
