@@ -1,6 +1,5 @@
 import { FaBug } from "react-icons/fa";
 import Link from "next/link";
-import Pathname from "./Pathname";
 
 const SideBar = () => {
 
@@ -47,13 +46,5 @@ const SideBarIcon = ({ icon }:any) => (
         {icon}
     </div>
 );
-
-let component = Pathname;
-
-if (component === "/dashboard") {
-
-    const element = document.getElementById("dashboard");
-    
-}
 
 export default SideBar;
