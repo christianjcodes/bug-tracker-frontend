@@ -35,7 +35,7 @@ export default function Page() {
                 <div id='stats' className='flex flex-col 
                     h-[35vh] mb-[5vh] ml-[17rem] mr-[10vh] bg-white
                     shadow-lg rounded-lg'>
-                    <h1>Stats Go Here</h1>
+                    <h1>Stats Go Right Here</h1>
                 </div>
 
             </div>
