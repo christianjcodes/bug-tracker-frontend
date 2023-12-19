@@ -5,9 +5,9 @@ import Link from 'next/link'
 const SignUpForm = () => {
   return (
     <>
-        <div className="w-full max-w-xs mt-16">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-              <div className='mb-4 flex text-teal-500 font-bold text-xl justify-center space-x-1.5'>
+        <div className="w-full max-w-xs mt-[19vh]">
+            <form className="bg-white dark:bg-slate-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <div className='mb-4 flex text-black dark:text-teal-300 font-bold text-xl justify-center space-x-1.5'>
                 <FaBug size="26"/>
                 <h1>
                   Bug Tracker
@@ -17,17 +17,20 @@ const SignUpForm = () => {
                 <h1>Create New Account</h1>
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="firstName">
+                <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="firstName">
                   First Name
                 </label>
                 <input className="
                   shadow
+                  dark:bg-slate-800
                   appearance-none
                   border rounded
+                  dark:border-black
                   w-full
                   py-2
                   px-3
                   text-gray-700
+                  dark:text-white
                   leading-tight
                   focus:outline-none
                   focus:shadow-outline"
@@ -37,17 +40,20 @@ const SignUpForm = () => {
                   placeholder="First Name"/>
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="lastName">
+                <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="lastName">
                   Last Name
                 </label>
                 <input className="
                   shadow
+                  dark:bg-slate-800
                   appearance-none
                   border rounded
+                  dark:border-black
                   w-full
                   py-2
                   px-3
                   text-gray-700
+                  dark:text-white
                   leading-tight
                   focus:outline-none
                   focus:shadow-outline"
@@ -57,17 +63,20 @@ const SignUpForm = () => {
                   placeholder="Last Name"/>
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="email">
                   Email
                 </label>
                 <input className="
-                  shadow 
+                  shadow
+                  dark:bg-slate-800 
                   appearance-none 
-                  border rounded 
+                  border rounded
+                  dark:border-black 
                   w-full 
                   py-2 
                   px-3 
-                  text-gray-700 
+                  text-gray-700
+                  dark:text-white 
                   leading-tight 
                   focus:outline-none 
                   focus:shadow-outline" 
@@ -76,26 +85,28 @@ const SignUpForm = () => {
                   placeholder="Email"/>
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="password">
                   Password
                 </label>
                 <input className="
-                shadow 
-                appearance-none 
-                border 
-                rounded 
-                w-full 
-                py-2 
-                px-3 
-                text-gray-700 
-                mb-2 
-                leading-tight 
-                focus:outline-none 
-                focus:shadow-outline" 
-                id="newPassword" 
-                type="password" 
-                autoComplete="new-password"
-                placeholder="**********"/>
+                    shadow
+                    dark:bg-slate-800 
+                    appearance-none 
+                    border rounded
+                    dark:border-black 
+                    w-full 
+                    py-2 
+                    px-3 
+                    text-gray-700
+                    dark:text-white 
+                    mb-2 
+                    leading-tight 
+                    focus:outline-none 
+                    focus:shadow-outline" 
+                    id="newPassword" 
+                    type="password" 
+                    autoComplete="new-password"
+                    placeholder="**********"/>
               </div>
               <div className="flex items-center justify-between">
                 <Link href="/dashboard">
