@@ -37,7 +37,7 @@ const [theme, setTheme] = useState('');
 
     return (
         <button
-            className="theme-toggle hover:scale-125 dark:text-white text-xl"
+            className="theme-toggle hover:scale-125 dark:text-teal-300 text-xl"
             onClick={toggleTheme}
         >
             {theme === "dark" ? (
