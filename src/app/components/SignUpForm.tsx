@@ -7,13 +7,13 @@ const SignUpForm = () => {
     <>
         <div className="w-full max-w-xs mt-[19vh]">
             <form className="bg-white dark:bg-slate-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-              <div className='mb-4 flex text-black dark:text-teal-300 font-bold text-xl justify-center space-x-1.5'>
+              <div className='mb-4 flex text-black dark:text-teal-300 font-semibold text-xl justify-center space-x-1.5'>
                 <FaBug size="26"/>
                 <h1>
                   Bug Tracker
                 </h1>
               </div>
-              <div className="mb-4 flex text-sky-500 font-bold text-xl justify-center">
+              <div className="mb-4 flex text-sky-500 font-semibold text-xl justify-center">
                 <h1>Create New Account</h1>
               </div>
               <div className="mb-4">
