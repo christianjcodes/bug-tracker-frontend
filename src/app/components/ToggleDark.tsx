@@ -1,16 +1,12 @@
-"use client"
 import { useState, useEffect } from "react";
 import * as React from "react";
 import { FaSun, FaRegMoon } from "react-icons/fa";
 
 export default function ToggleDark() {
 
-
-const [theme, setTheme] = useState('');
+    const [theme, setTheme] = useState('');
 
     useEffect(() => {
-
-        const theme = JSON.parse(localStorage.getItem('theme') || '{}');
 
         if ((!theme && 
         window.matchMedia('(prefers-color-scheme: dark)').matches) || theme === 'dark') {
