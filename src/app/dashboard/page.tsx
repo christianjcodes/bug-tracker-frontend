@@ -5,12 +5,12 @@ import SideBar from '../components/SideBar';
 export default function Page() {
     return (
         <>
-            <div className='h-screen w-screen flex flex-col'>    
+            <div className='h-screen w-screen flex flex-col bg-white dark:bg-black'>    
                 
-                <SideBar />
+                {/* <SideBar /> */}
             
-                <div id='projects' className='flex flex-row mt-[10vh] 
-                    h-[45vh] mb-[5vh] ml-[17rem] mr-[10vh] bg-white
+                <div id='projects' className='flex flex-row mt-[10vh] ml-8 mr-8 mb-8 
+                    h-[45vh] bg-white dark:bg-slate-800 dark:text-white
                     shadow-lg rounded-lg'>
                     <h1>Projects Go Here</h1>
                     <button className='
@@ -30,7 +30,7 @@ export default function Page() {
                 </div>
 
                 <div id='stats' className='flex flex-col 
-                    h-[35vh] mb-[5vh] ml-[17rem] mr-[10vh] bg-white
+                    h-[35vh] mb-[5vh] ml-8 mr-8 bg-white dark:bg-slate-800 dark:text-white
                     shadow-lg rounded-lg'>
                     <h1>Stats Go Here</h1>
                 </div>

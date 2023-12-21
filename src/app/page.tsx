@@ -11,7 +11,7 @@ export default function Home() {
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
-  var classStyle;
+  let classStyle;
 
   if (currentTheme == 'dark') {
     classStyle = styles.homePageDark;

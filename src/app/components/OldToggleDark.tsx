@@ -1,4 +1,3 @@
-"use client"
 import { useState, useEffect } from "react";
 import * as React from "react";
 import { FaSun, FaRegMoon } from "react-icons/fa";
