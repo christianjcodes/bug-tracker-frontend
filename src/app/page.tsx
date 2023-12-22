@@ -7,6 +7,8 @@ import { useTheme } from "next-themes";
 
 export default function Home() {
 
+  // System theme code currently not functioning, will replace later
+
   const { systemTheme, theme } = useTheme();
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
