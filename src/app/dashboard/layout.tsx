@@ -1,9 +1,14 @@
-import styles from '../page.module.css'
+import SideBar from '../components/SideBar';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div className={styles.dashboard}>
+    <section>
+      <SideBar />
       {children}
-    </div>
-  );
+    </section>
+  )
 }
