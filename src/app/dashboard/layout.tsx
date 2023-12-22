@@ -7,8 +7,10 @@ export default function DashboardLayout({
 }) {
   return (
     <section>
-      <SideBar />
-      {children}
+      <div className='flex dark:bg-black'>
+        <SideBar />
+        <div>{children}</div>
+      </div>
     </section>
   )
 }
