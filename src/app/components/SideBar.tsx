@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '../lib/utils';
+import { FaTable } from 'react-icons/fa';
 
 type Props = {}
 
@@ -10,10 +11,21 @@ export default function SideBar({}: Props) {
       )}
     >
       <HoverContainer>
-        SideBar
+        <FaTable />
       </HoverContainer>
     </nav>
   )
+}
+
+function SideNavItem() {
+  return <div className='flex gap-2 items-center cursor-pointer'>
+
+    {/* icon */}
+    <div>
+
+    </div>
+    {/* label */}
+  </div>
 }
 
 function HoverContainer({
@@ -24,7 +36,8 @@ function HoverContainer({
 }) {
   return ( 
     <div className='p-3 transition-all rounded-full cursor-pointer
-    hover:bg-gray-200 w-fit dark:hover:bg-zinc-900'>
+    hover:bg-gray-200 w-fit dark:hover:bg-zinc-900 group-hover:dark:bg-zinc-900
+    group-hover:bg-gray-200'>
       {children}
     </div>
   );
