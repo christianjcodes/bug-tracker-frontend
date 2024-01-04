@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import { cn } from '../lib/utils';
 import { MdOutlineDashboard } from "react-icons/md";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
@@ -6,7 +7,19 @@ import { RiArrowLeftDoubleFill } from "react-icons/ri";
 
 type Props = {}
 
+interface SideNavItemType {
+  icon: {
+    icon:React.ReactNode;
+    fillIcon: React.ReactNode;
+  };
+  label: string;
+  href: string;
+}
+
 export default function SideBar({}: Props) {
+
+  const [isSidebarOpen, setSideBarOpen] = useState(true);
+
   return (
     <nav className={cn(
       'min-h-screen max-h-screen mt-[4rem] overflow-y-auto w-fit md:pr-8 pr-3 pt-2 flex flex-col gap-3 border-r-[1px] dark:border-r-slate-700 pl-[50px] dark:bg-slate-800 dark:text-white'
@@ -17,7 +30,12 @@ export default function SideBar({}: Props) {
       </HoverContainer>
 
       {/* toggle button */}
-      <RiArrowLeftDoubleFill />
+      <HoverContainer>
+        <RiArrowLeftDoubleFill 
+          onClick={() =>setSideBarOpen(!isSidebarOpen)}
+          className={cn("text-gray-400 transition-all text-4xl dark:text-white",
+          !isSidebarOpen && "rotate-180" )}/>
+      </HoverContainer>
 
     </nav>
   )
