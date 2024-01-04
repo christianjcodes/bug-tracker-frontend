@@ -1,6 +1,8 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { FaTable } from 'react-icons/fa';
+import { MdOutlineDashboard } from "react-icons/md";
+import { RiArrowLeftDoubleFill } from "react-icons/ri";
+
 
 type Props = {}
 
@@ -11,8 +13,12 @@ export default function SideBar({}: Props) {
       )}
     >
       <HoverContainer>
-        <FaTable />
+        <SideNavItem />
       </HoverContainer>
+
+      {/* toggle button */}
+      <RiArrowLeftDoubleFill />
+
     </nav>
   )
 }
@@ -21,10 +27,11 @@ function SideNavItem() {
   return <div className='flex gap-2 items-center cursor-pointer'>
 
     {/* icon */}
-    <div>
-
+    <div className='w-[35px] h-[35px] text-3xl flex items-center'>
+      <MdOutlineDashboard />
     </div>
     {/* label */}
+    <p className='text-xl hidden md:block transition-all'>Dashboard</p>
   </div>
 }
 
