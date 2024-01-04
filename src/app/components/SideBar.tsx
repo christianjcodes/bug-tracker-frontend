@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import { cn } from '../lib/utils';
 import { MdOutlineDashboard } from "react-icons/md";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
+import Link from 'next/link';
 
 
 type Props = {}
 
 interface SideNavItemType {
-  icon: {
+  icon?: {
     icon:React.ReactNode;
     fillIcon: React.ReactNode;
   };
@@ -26,7 +27,8 @@ export default function SideBar({}: Props) {
       )}
     >
       <HoverContainer>
-        <SideNavItem />
+        <SideNavItem icon={{ fillIcon: <MdOutlineDashboard />,
+        icon: <MdOutlineDashboard />}} href='/dashboard' label="Dashboard"/>
       </HoverContainer>
 
       {/* toggle button */}
@@ -41,16 +43,20 @@ export default function SideBar({}: Props) {
   )
 }
 
-function SideNavItem() {
-  return <div className='flex gap-2 items-center cursor-pointer'>
-
-    {/* icon */}
-    <div className='w-[35px] h-[35px] text-3xl flex items-center'>
-      <MdOutlineDashboard />
-    </div>
-    {/* label */}
-    <p className='text-xl hidden md:block transition-all'>Dashboard</p>
-  </div>
+function SideNavItem(props: SideNavItemType) {
+  return (
+    <Link href={props.href} className='flex gap-2 items-center cursor-pointer'>
+      {/* icon */}
+      <div className='w-[35px] h-[35px] text-3xl flex items-center'>
+        {/* <MdOutlineDashboard /> */}
+        {props.icon.icon}
+      </div>
+      {/* label */}
+      <p className='text-xl hidden md:block transition-all'>
+        {props.label}
+      </p>
+    </Link>
+  )
 }
 
 function HoverContainer({
