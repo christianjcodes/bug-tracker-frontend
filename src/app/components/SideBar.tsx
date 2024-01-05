@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import { cn } from '../lib/utils';
 import { MdOutlineDashboard, MdDashboard } from "react-icons/md";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
+import { IoTicketOutline, IoTicket } from "react-icons/io5";
+import { AiOutlineProject, AiFillProject } from "react-icons/ai";
+import { RiAdminLine, RiAdminFill } from "react-icons/ri";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 
 type Props = {}
@@ -24,7 +28,32 @@ const sidebarItems: SideNavItemType[] = [
     icon:{
       icon:<MdOutlineDashboard />,
       fillIcon:<MdDashboard />
-}}
+    }
+  },
+  {
+    href: "/dashboard/projects",
+    label: "Projects", 
+    icon:{
+      icon:<AiOutlineProject />,
+      fillIcon:<AiFillProject />
+    }
+  },
+  {
+    href: "/dashboard/tickets",
+    label: "Tickets", 
+    icon:{
+      icon:<IoTicketOutline />,
+      fillIcon:<IoTicket />
+    }
+  },
+  {
+    href: "/dashboard/admin",
+    label: "Administration", 
+    icon:{
+      icon:<RiAdminLine />,
+      fillIcon:<RiAdminFill />
+    }
+  }
 ]
 
 export default function SideBar({}: Props) {
@@ -64,17 +93,26 @@ export default function SideBar({}: Props) {
 }
 
 function SideNavItem({ 
-  href, isSideBarOpen, icon, label}: SideNavItemType & { isSideBarOpen: boolean }) {
+  href, 
+  isSideBarOpen, 
+  icon, 
+  label
+}: SideNavItemType & { isSideBarOpen: boolean }) {
+
+  const pathname = usePathname();
+  const isActivePage = pathname == href;
+
   return (
     <Link href={href} className='flex gap-2 items-center cursor-pointer'>
       {/* icon */}
       <div className='w-[35px] h-[35px] text-3xl flex items-center'>
         {/* <MdOutlineDashboard /> */}
-        {icon?.icon}
+        {isActivePage ? icon?.fillIcon : icon?.icon}
       </div>
       {/* label */}
       { isSideBarOpen && (
-        <p className='text-xl hidden md:block transition-all'>
+        <p className={cn('text-xl hidden md:block pr-2 transition-all',
+          isActivePage && 'font-bold')}>
           {label}
         </p>
       )}
