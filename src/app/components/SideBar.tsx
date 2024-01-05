@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { cn } from '../lib/utils';
-import { MdOutlineDashboard } from "react-icons/md";
+import { MdOutlineDashboard, MdDashboard } from "react-icons/md";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
 import Link from 'next/link';
 
@@ -17,15 +17,28 @@ interface SideNavItemType {
   href: string;
 }
 
+const sidebarItems: SideNavItemType[] = [
+  {
+    href: "/dashboard",
+    label: "Dashboard", 
+    icon:{
+      icon:<MdOutlineDashboard />,
+      fillIcon:<MdDashboard />
+}}
+]
+
 export default function SideBar({}: Props) {
 
   const [isSidebarOpen, setSideBarOpen] = useState(true);
 
   return (
     <nav className={cn(
-      'min-h-screen max-h-screen mt-[4rem] overflow-y-auto w-fit md:pr-8 pr-3 pt-2 flex flex-col gap-3 border-r-[1px] dark:border-r-slate-700 pl-[50px] dark:bg-slate-800 dark:text-white'
+      'min-h-screen max-h-screen mt-[4rem] overflow-y-auto w-fit md:pr-8 pr-3 pt-2 flex flex-col gap-3 border-r-[1px] dark:border-r-slate-700 pl-[50px] dark:bg-slate-800 dark:text-white',
+      isSidebarOpen && 'md:w-[300px]'
       )}
     >
+      
+      {/* sidenavitems */}
       <HoverContainer>
         <SideNavItem icon={{ fillIcon: <MdOutlineDashboard />,
         icon: <MdOutlineDashboard />}}
@@ -56,9 +69,11 @@ function SideNavItem({
         {icon?.icon}
       </div>
       {/* label */}
-      <p className='text-xl hidden md:block transition-all'>
-        {label}
-      </p>
+      { isSideBarOpen && (
+        <p className='text-xl hidden md:block transition-all'>
+          {label}
+        </p>
+      )}
     </Link>
   )
 }
