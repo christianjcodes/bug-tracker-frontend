@@ -28,7 +28,10 @@ export default function SideBar({}: Props) {
     >
       <HoverContainer>
         <SideNavItem icon={{ fillIcon: <MdOutlineDashboard />,
-        icon: <MdOutlineDashboard />}} href='/dashboard' label="Dashboard"/>
+        icon: <MdOutlineDashboard />}}
+        href='/dashboard' 
+        isSideBarOpen={isSidebarOpen}
+        label="Dashboard"/>
       </HoverContainer>
 
       {/* toggle button */}
@@ -43,17 +46,18 @@ export default function SideBar({}: Props) {
   )
 }
 
-function SideNavItem(props: SideNavItemType) {
+function SideNavItem({ 
+  href, isSideBarOpen, icon, label}: SideNavItemType & { isSideBarOpen: boolean }) {
   return (
-    <Link href={props.href} className='flex gap-2 items-center cursor-pointer'>
+    <Link href={href} className='flex gap-2 items-center cursor-pointer'>
       {/* icon */}
       <div className='w-[35px] h-[35px] text-3xl flex items-center'>
         {/* <MdOutlineDashboard /> */}
-        {props.icon.icon}
+        {icon?.icon}
       </div>
       {/* label */}
       <p className='text-xl hidden md:block transition-all'>
-        {props.label}
+        {label}
       </p>
     </Link>
   )
