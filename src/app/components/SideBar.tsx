@@ -37,15 +37,19 @@ export default function SideBar({}: Props) {
       isSidebarOpen && 'md:w-[300px]'
       )}
     >
-      
+
       {/* sidenavitems */}
-      <HoverContainer>
-        <SideNavItem icon={{ fillIcon: <MdOutlineDashboard />,
-        icon: <MdOutlineDashboard />}}
-        href='/dashboard' 
-        isSideBarOpen={isSidebarOpen}
-        label="Dashboard"/>
-      </HoverContainer>
+
+      {sidebarItems.map((d, i) => (
+        <HoverContainer key={i}>
+          <SideNavItem 
+            icon={d.icon}
+            href={d.href}
+            isSideBarOpen={isSidebarOpen}
+            label={d.label}
+          />
+        </HoverContainer>
+      ))}
 
       {/* toggle button */}
       <HoverContainer>
