@@ -7,6 +7,8 @@ import { RiArrowLeftDoubleFill } from "react-icons/ri";
 import { IoTicketOutline, IoTicket } from "react-icons/io5";
 import { AiOutlineProject, AiFillProject } from "react-icons/ai";
 import { RiAdminLine, RiAdminFill } from "react-icons/ri";
+import { IoIosPower } from "react-icons/io";
+import { IoMdPower } from "react-icons/io";
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -57,6 +59,14 @@ const sidebarItems: SideNavItemType[] = [
       icon:<RiAdminLine />,
       fillIcon:<RiAdminFill />
     }
+  },
+  {
+    href: "/",
+    label: "Sign Out", 
+    icon:{
+      icon:<IoIosPower />,
+      fillIcon:<IoMdPower />
+    }
   }
 ]
 
@@ -90,7 +100,7 @@ export default function SideBar({}: Props) {
         <HoverContainer>
           <RiArrowLeftDoubleFill 
             onClick={() =>setSideBarOpen(!isSidebarOpen)}
-            className={cn("text-gray-400 transition-all text-4xl dark:text-white",
+            className={cn("text-gray-400 transition-all text-3xl dark:text-white",
             !isSidebarOpen && "rotate-180" )}/>
         </HoverContainer>
       </section>
