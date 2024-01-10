@@ -5,7 +5,6 @@ import { cn } from '../lib/utils';
 import { MdOutlineDashboard, MdDashboard } from "react-icons/md";
 import { RiArrowLeftDoubleFill } from "react-icons/ri";
 import { IoTicketOutline, IoTicket } from "react-icons/io5";
-import { AiOutlineProject, AiFillProject } from "react-icons/ai";
 import { RiAdminLine, RiAdminFill } from "react-icons/ri";
 import { IoIosPower } from "react-icons/io";
 import { IoMdPower } from "react-icons/io";
@@ -34,14 +33,6 @@ const sidebarItems: SideNavItemType[] = [
     icon:{
       icon:<MdOutlineDashboard />,
       fillIcon:<MdDashboard />
-    }
-  },
-  {
-    href: "/dashboard/projects",
-    label: "Projects", 
-    icon:{
-      icon:<AiOutlineProject />,
-      fillIcon:<AiFillProject />
     }
   },
   {
