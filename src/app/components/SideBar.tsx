@@ -67,7 +67,7 @@ export default function SideBar({}: Props) {
 
   return (
     <nav className={cn(
-      'min-h-screen max-h-screen mt-[4rem] overflow-y-auto w-fit md:pr-8 pr-3 ' + 
+      'min-h-[calc(100vh-4rem)] max-h-[calc(100vh-4rem)] mt-[4rem] overflow-y-auto w-fit md:pr-8 pr-3 ' + 
       'pt-2 flex flex-col gap-3 border-r-[1px] pl-[35px] ' +
       'dark:bg-black dark:border-r-slate-700 dark:text-sky-400 shadow-md dark:shadow-none' ,
       isSidebarOpen && 'md:w-[300px]'
