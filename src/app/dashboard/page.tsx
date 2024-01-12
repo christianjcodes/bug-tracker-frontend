@@ -1,7 +1,9 @@
 export default function Page() {
     return (
         <>
-            <div>dashboard</div>
+            <main className="flex flex-col">
+                
+            </main>
         </>
     );
 }
